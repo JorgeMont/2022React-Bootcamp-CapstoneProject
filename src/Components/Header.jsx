@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Logo from '../Assets/companyLogo.png';
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.header`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -9,6 +9,7 @@ const HeaderContainer = styled.div`
         color: white;
         padding: 0.5rem 0;
         margin: 0;
+        flex: 0 0 auto;
 
         section{
             display: flex;
