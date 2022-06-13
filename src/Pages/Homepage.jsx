@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import Categories from '../Components/Categories';
+import Slider from '../Components/Slider';
 
 const HomepageContainer = styled.section`
     background-color: gray;
@@ -8,7 +10,8 @@ const HomepageContainer = styled.section`
 const Homepage = () => {
     return(
         <HomepageContainer>
-            Hola soy un homepage verde
+            <Slider />
+            <Categories />
         </HomepageContainer>
     );
 }

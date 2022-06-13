@@ -82,11 +82,11 @@ const Header = () => {
                     <form>
                         <input type="text" name="search" id="search" />
                         <ButtonSearch type='submit'>
-                            <i class="fa-solid fa-magnifying-glass" />
+                            <i className="fa-solid fa-magnifying-glass" />
                         </ButtonSearch>
                     </form>
                 </SearchBarContainer>
-                <CartContainer><i class="fa-solid fa-cart-shopping" /></CartContainer>
+                <CartContainer><i className="fa-solid fa-cart-shopping" /></CartContainer>
             </section>
         </HeaderContainer>
     );
