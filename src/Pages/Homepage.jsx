@@ -4,7 +4,7 @@ import ProductGrid from '../Components/ProductsGrid';
 import Slider from '../Components/Slider';
 
 const HomepageContainer = styled.section`
-    background-color: gray;
+    background-color: #eaeded;
     flex: 1 0 auto;
 `;
 

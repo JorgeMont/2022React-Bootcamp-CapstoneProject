@@ -5,10 +5,19 @@ import CategoryCard from "./CategoryCard";
 
 const CategoryContainer = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
     background-color: #eaeded;
     padding: 2rem 0;
+
+    h2{
+        padding: 1rem 0;
+    }
+    .categories-grid{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 `;
 
 const CategoryGrid = () => {
@@ -19,9 +28,12 @@ const CategoryGrid = () => {
     return(
         categoriesArray ? 
         <CategoryContainer>
+            <h2>Explore our main categories</h2>
+            <div className="categories-grid">
             {categoriesArray.map(
                 (cat)=><CategoryCard key={cat.id} name={cat.data.name}/>
             )}
+            </div>
         </CategoryContainer>
         :
         <p>Nothing yet</p>
