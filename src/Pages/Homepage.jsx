@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import Categories from '../Components/Categories';
+import CategoryGrid from '../Components/CategoryGrid';
+import ProductGrid from '../Components/ProductsGrid';
 import Slider from '../Components/Slider';
 
 const HomepageContainer = styled.section`
@@ -11,7 +12,8 @@ const Homepage = () => {
     return(
         <HomepageContainer>
             <Slider />
-            <Categories />
+            <CategoryGrid />
+            <ProductGrid />
         </HomepageContainer>
     );
 }
