@@ -7,6 +7,7 @@ const ShopContainer = styled.main`
     display: flex;
     flex-direction: column;
     height: 100vh;
+    z-index: 2147483650;
 `;
 
 const Shop = () => {

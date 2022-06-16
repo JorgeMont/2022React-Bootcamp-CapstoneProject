@@ -15,8 +15,13 @@ const CategoryContainer = styled.div`
     }
     .categories-grid{
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-evenly;
+    }
+
+    @media(max-width: ){
+
     }
 `;
 
@@ -28,7 +33,7 @@ const CategoryGrid = () => {
     return(
         categoriesArray ? 
         <CategoryContainer>
-            <h2>Explore our main categories</h2>
+            <h2>Explore our main categoriesss</h2>
             <div className="categories-grid">
             {categoriesArray.map(
                 (cat)=><CategoryCard key={cat.id} name={cat.data.name}/>

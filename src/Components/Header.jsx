@@ -45,6 +45,31 @@ const SearchBarContainer = styled.div`
             text-align: right;
         }
     }
+
+    @media(max-width: 1046px){
+        margin: 0;
+        form{
+            input{
+                width: 20rem;
+            }
+        }
+    }
+
+    @media(max-width: 606px){
+        form{
+            input{
+                width: 12rem;
+            }
+        }
+    }
+
+    @media(max-width: 468px){
+        form{
+            input{
+                width: 5rem;
+            }
+        }
+    }
 `;
 
 const CartContainer = styled.div`
@@ -79,7 +104,7 @@ const Header = () => {
             <ImageContainer><img src={Logo} alt="company logo" /></ImageContainer>
             <section>
                 <SearchBarContainer>
-                    <form>
+                    <form className='searchBar'>
                         <input type="text" name="search" id="search" />
                         <ButtonSearch type='submit'>
                             <i className="fa-solid fa-magnifying-glass" />

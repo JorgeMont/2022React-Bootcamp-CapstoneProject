@@ -4,7 +4,7 @@ const CardContainer = styled.div`
     text-align: left;
     background-color: #FFF5EE;
     width: 16rem;
-    height: 25rem;
+    height: 29rem;
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 6px 13px 10px 0px rgba(0,0,0,0.2);
@@ -28,6 +28,8 @@ const CardContainer = styled.div`
     .prodInfo{
         h1{
             padding: 0.2rem 0;
+            font-size: 1.5rem;
+            height: 4rem;
         }
         .productTitle{ 
             border: 1px solid #c1c6c7;
@@ -44,13 +46,16 @@ const CardContainer = styled.div`
 
         }
 
-        p{
+        .priceTag{
             font-size: 1.8rem;
+            margin: 0.5rem;
         }
 
         .botones{
             display: flex;
             flex-direction: row;
+            /* position: relative;
+            bottom: 0px; */
 
             .buyButton{
                 background-color: #27c9a4;
@@ -90,7 +95,7 @@ const ProductCard = ({imgUrl, altImg, prodCategory, prodPrice, prodName}) => {
             <div className="productTitle">
                 <h2>{prodCategory}</h2>
             </div>
-            <p>${prodPrice}</p>
+            <p className="priceTag">${prodPrice}</p>
             <div className="botones">
                 <div className="buyButton">
                     Buy

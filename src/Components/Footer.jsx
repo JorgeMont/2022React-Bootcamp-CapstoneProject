@@ -9,8 +9,14 @@ const FooterContainer = styled.footer`
     align-items: center;
     justify-content: center;
     
-    p{
+    .footerText{
         padding: 0 2rem;
+    }
+
+    @media(max-width: 485px){
+        .footerText{
+            font-size: 0.6rem;
+        }
     }
 `;
 
@@ -18,7 +24,7 @@ const Footer = () => {
     return(
         <FooterContainer>
             
-            <p>Ecommerce created during Wizeline’s Academy React Bootcamp</p>
+            <p className='footerText'>Ecommerce created during Wizeline’s Academy React Bootcamp</p>
         </FooterContainer>
     );
 }

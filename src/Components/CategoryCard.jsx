@@ -13,6 +13,7 @@ const CategoryCardContainer = styled.div`
     -webkit-box-shadow: 10px 10px 15px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 15px -4px rgba(0,0,0,0.75);
     border: 1px;
+    margin: 1rem 0.5rem;
     
 
     &:hover{
