@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const FooterContainer = styled.footer`
+const StyledFooterContainer = styled.footer`
     background-color: #232f3e;
     color: #d7d5d8;
     flex: 0 0 4rem;
@@ -20,15 +20,4 @@ const FooterContainer = styled.footer`
     }
 `;
 
-const Footer = () => {
-    return(
-        <FooterContainer>
-            
-            <p className='footerText'>
-                Ecommerce created during Wizeline’s Academy React Bootcamp hola
-            </p>
-        </FooterContainer>
-    );
-}
-
-export default Footer;
+export default StyledFooterContainer;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ControlButton = styled.div`
+const SliderButtonStyled = styled.div`
 
             .ControlButton{
                 background-color: white;
@@ -16,14 +16,4 @@ const ControlButton = styled.div`
             }
 `;
 
-const SliderButton = ({ icon }) => {
-    return (
-        <ControlButton>
-            <div className="ControlButton" onClick={() => { console.log('click en izquierda'); }}>
-                <i className={icon} />
-            </div>
-        </ControlButton>
-    )
-}
-
-export default SliderButton;
+export default SliderButtonStyled;

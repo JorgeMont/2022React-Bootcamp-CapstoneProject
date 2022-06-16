@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const CategoryCardContainer = styled.div`
+const StyledCategoryCardContainer = styled.div`
     background-color: white;
     width: 15rem;
     height: 5rem;
@@ -21,12 +21,4 @@ const CategoryCardContainer = styled.div`
     }
 `;
 
-const CategoryCard = ({name="the name"}) => {
-    return(
-        <CategoryCardContainer>
-            <p>{name}</p>
-        </CategoryCardContainer>
-    );
-}
-
-export default CategoryCard;
+export default StyledCategoryCardContainer;

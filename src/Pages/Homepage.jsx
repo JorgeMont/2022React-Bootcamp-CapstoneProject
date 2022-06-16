@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import CategoryGrid from '../Components/CategoryGrid';
-import ProductGrid from '../Components/ProductsGrid';
-import Slider from '../Components/Slider';
+import CategoryGrid from '../Components/CategoryGrid/CategoryGrid';
+import ProductGrid from '../Components/ProductsGrid/ProductsGrid';
+import Slider from '../Components/Slider/Slider';
 
 const HomepageContainer = styled.section`
     background-color: #eaeded;
