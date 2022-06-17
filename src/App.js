@@ -1,5 +1,5 @@
+import React from 'react';
 import Shop from './Pages/Shop';
-import styled from 'styled-components';
 import { useFeaturedBanners } from './utils/hooks/useFeaturedBanners';
 
 function App() {

@@ -1,3 +1,4 @@
+import React from 'react';
 import StyledCategoryCardContainer from "./StyledCategoryCard";
 
 const CategoryCard = ({name="the name"}) => {

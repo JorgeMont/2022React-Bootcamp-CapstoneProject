@@ -1,3 +1,4 @@
+import React from 'react';
 import Logo from '../../Assets/companyLogo.png';
 import HeaderContainer from './HeaderStyled';
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import StyledFooterContainer from "./StyledFooter";
 
 const Footer = () => {

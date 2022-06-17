@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import Productslist from '../../utils/mocks/en-us/featured-products.json';
 import ProductCard from './ProductCard/ProductCard';
 import ProductGridContainer from './ProductsGridStyled';

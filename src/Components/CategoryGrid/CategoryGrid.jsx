@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, {useEffect, useState } from "react";
 import StyledCategoryContainer from "./StyledCategoryGrid";
 import CategoriesList from '../../utils/mocks/en-us/product-categories.json'
 import CategoryCard from "./CategoryCard/CategoryCard";
@@ -8,6 +8,7 @@ const CategoryGrid = () => {
     useEffect(()=>{
         setCategoriesArray([...CategoriesList.results]);
     },[])
+
     return(
         categoriesArray ? 
         <StyledCategoryContainer>
