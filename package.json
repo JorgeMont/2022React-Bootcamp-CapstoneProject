@@ -2,7 +2,7 @@
   "name": "wa-react-2021-q4-capstone-project",
   "version": "0.1.0",
   "private": true,
-  "hompeage": "http://JorgeMont.github.io/2022React-Bootcamp-CapstoneProject",
+  "hompeage": "https://JorgeMont.github.io/2022React-Bootcamp-CapstoneProject",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
