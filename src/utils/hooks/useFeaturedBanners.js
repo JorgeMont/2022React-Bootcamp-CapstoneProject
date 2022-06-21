@@ -33,7 +33,7 @@ export function useFeaturedBanners() {
         setFeaturedBanners({ data, isLoading: false });
       } catch (err) {
         setFeaturedBanners({ data: {}, isLoading: false });
-        console.error(err);
+        // console.error(err);
       }
     }
 
