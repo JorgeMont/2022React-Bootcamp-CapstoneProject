@@ -26,15 +26,22 @@ const ProductCardStyled = styled.div`
     }
 
     .prodInfo{
-        h1{
+        .productName{
             padding: 0.2rem 0;
             font-size: 1.5rem;
             height: 4rem;
+            margin-bottom: 0.3rem;
         }
 
         .botones{
             display: flex;
             flex-direction: row;
+        }
+
+        @media(max-width: 394px){
+            .productName{
+                font-size: 1.2rem;
+            }
         }
     }
 `;

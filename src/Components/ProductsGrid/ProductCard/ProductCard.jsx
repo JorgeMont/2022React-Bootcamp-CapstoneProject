@@ -12,7 +12,7 @@ const ProductCard = ({imgUrl, altImg, prodCategory, prodPrice, prodName}) => {
             <img src={imgUrl} alt={altImg} />
         </div>
         <div className="prodInfo">
-            <h1>{prodName}</h1>
+            <h1 className='productName'>{prodName}</h1>
             <CategoryLabel categoryName={prodCategory}/>
             <PriceTag price={prodPrice}/>
             <div className="botones">
