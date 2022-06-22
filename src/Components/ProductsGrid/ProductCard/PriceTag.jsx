@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import styled from "styled-components";
 
 const PriceTagStyled =  styled.div`
@@ -7,23 +7,22 @@ const PriceTagStyled =  styled.div`
 `;
 
 const PriceTag = ({price}) => {
-    const [myPrice, setMyPrice] = useState(price.toString())
 
     const formatPrice = (p) => {
-        let asArray = p.split('');
-        asArray.splice(p.length-6, 0, ',');
-        return asArray.join('');
-    }
-
-    useEffect(()=>{
-        if(myPrice.length >= 7){
-            setMyPrice(formatPrice(myPrice));
+        if(p.length >= 7){
+            let asArray = p.split('');
+            asArray.splice(p.length-6, 0, ',');
+            return asArray.join('');
         }
-    },[])
+        else{
+            return p;
+        }
+        
+    }
 
     return(
         <PriceTagStyled>
-            <p>${myPrice}</p>
+            <p>${formatPrice(price.toString())}</p>
         </PriceTagStyled>
     )
 }
