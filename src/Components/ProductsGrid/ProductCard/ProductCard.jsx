@@ -1,4 +1,8 @@
 import React from 'react';
+import AddCartButton from './AddCartButton';
+import BuyButton from './BuyButton';
+import CategoryLabel from './CategoryLabel';
+import PriceTag from './PriceTag';
 import ProductCardStyled from './ProductCardStyled';
 
 const ProductCard = ({imgUrl, altImg, prodCategory, prodPrice, prodName}) => {
@@ -9,17 +13,11 @@ const ProductCard = ({imgUrl, altImg, prodCategory, prodPrice, prodName}) => {
         </div>
         <div className="prodInfo">
             <h1>{prodName}</h1>
-            <div className="productTitle">
-                <h2>{prodCategory}</h2>
-            </div>
-            <p className="priceTag">${prodPrice}</p>
+            <CategoryLabel categoryName={prodCategory}/>
+            <PriceTag price={prodPrice}/>
             <div className="botones">
-                <div className="buyButton">
-                    Buy
-                </div>
-                <div className="addCartButton">
-                    <i className="fa-solid fa-cart-plus" />
-                </div>
+                <BuyButton text={'Buy'}/>
+                <AddCartButton />
             </div>
         </div>
     </ProductCardStyled>);
