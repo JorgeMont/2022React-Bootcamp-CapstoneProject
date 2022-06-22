@@ -6,7 +6,7 @@ const Footer = () => {
         <StyledFooterContainer>
             
             <p className='footerText'>
-                Ecommerce created during Wizeline’s Academy React Bootcamp hola
+                Ecommerce created during Wizeline’s Academy React Bootcamp
             </p>
         </StyledFooterContainer>
     );
