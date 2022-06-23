@@ -1,3 +1,4 @@
+import React from 'react';
 import SliderButtonStyled from "./SliderButtonStyled";
 
 const SliderButton = ({ icon, handleClick }) => {

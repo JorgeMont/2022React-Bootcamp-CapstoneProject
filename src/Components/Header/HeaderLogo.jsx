@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from "styled-components";
 
 const HeaderLogoStyled = styled.div`
@@ -10,9 +11,9 @@ const HeaderLogoStyled = styled.div`
     }
 `;
 
-const HeaderLogo = ({srcLogo}) =>{
+const HeaderLogo = ({srcLogo, pageHandler}) =>{
     return(
-        <HeaderLogoStyled>
+        <HeaderLogoStyled onClick={()=>{pageHandler(true)}}>
             <img src={srcLogo} alt="company logo" />
         </HeaderLogoStyled>
     );

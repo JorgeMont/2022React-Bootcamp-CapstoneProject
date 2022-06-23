@@ -5,11 +5,11 @@ import HeaderContainer from './HeaderStyled';
 import SearchBar from './SearchBar';
 import ShoppingCart from './ShoppingCart';
 
-const Header = () => {
+const Header = ({pageHandler}) => {
 
     return (
         <HeaderContainer>
-            <HeaderLogo srcLogo={Logo}/>
+            <HeaderLogo srcLogo={Logo} pageHandler={pageHandler}/>
                 <div className='searchBarContainer'>
                     <SearchBar />
                 </div>
