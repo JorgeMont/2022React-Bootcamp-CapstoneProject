@@ -14,7 +14,7 @@ const SideBarStyled = styled.section`
 
 `;
 
-const SideBar = () => {
+const SideBar = ({selectedCatList, addSelectedCat}) => {
     const [categoriesList, setCategoriesList] = useState();
 
     useEffect(
@@ -28,7 +28,13 @@ const SideBar = () => {
     <SideBarStyled>
         <div className="categoriesContainer">
             {categoriesList.map(
-                (cat)=><CategoryLabel catName={cat.data.name} key={cat.id} />)
+                (cat)=>
+                <CategoryLabel 
+                key={cat.id} 
+                catName={cat.data.name} 
+                selectedCatList={selectedCatList}
+                addSelectedCat={addSelectedCat}
+                />)
             }
         </div>
     </SideBarStyled>

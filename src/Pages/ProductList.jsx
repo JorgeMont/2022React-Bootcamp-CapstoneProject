@@ -10,11 +10,11 @@ const ProductListStyled = styled.div`
 `;
 
 const ProductList =  ({pageHandler}) => {
-    const [selectedCat, setSelectedCat] = useState();
+    const [selectedCat, setSelectedCat] = useState([]);
     
     return(
         <ProductListStyled>
-            <SideBar />
+            <SideBar selectedCatList={selectedCat} addSelectedCat={setSelectedCat} />
             <ProductsGrid />
         </ProductListStyled>
     );

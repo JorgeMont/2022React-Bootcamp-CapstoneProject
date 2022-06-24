@@ -13,21 +13,28 @@ const CategoryLabelStyled = styled.div`
     }
 `;
 
-const CategoryLabel = ({catName}) => {
+const CategoryLabel = ({catName, selectedCatList, addSelectedCat}) => {
     const [isSelected, setIsSelected] = useState('white');
 
-    const changeSelectedColor = (color) => {
+    const handleClick = (color) => {
         if(isSelected === "white"){
             setIsSelected('#eaeded');
         }
         else{
             setIsSelected('white');
         }
+
+        if(selectedCatList.includes(catName)){
+            addSelectedCat([...selectedCatList.filter(el=>el !== catName)]);
+        }
+        else{
+            addSelectedCat([...selectedCatList, catName]);
+        }
     }
     return(
         <CategoryLabelStyled 
         color={isSelected}
-        onClick={changeSelectedColor}
+        onClick={handleClick}
         
         >
             {catName}
