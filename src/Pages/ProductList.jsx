@@ -15,7 +15,7 @@ const ProductList =  ({pageHandler}) => {
     return(
         <ProductListStyled>
             <SideBar selectedCatList={selectedCat} addSelectedCat={setSelectedCat} />
-            <ProductsGrid />
+            <ProductsGrid selectedCats={selectedCat}/>
         </ProductListStyled>
     );
 }

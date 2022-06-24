@@ -13,7 +13,7 @@ const CategoryLabelStyled = styled.div`
     }
 `;
 
-const CategoryLabel = ({catName, selectedCatList, addSelectedCat}) => {
+const CategoryLabel = ({cat, selectedCatList, addSelectedCat}) => {
     const [isSelected, setIsSelected] = useState('white');
 
     const handleClick = (color) => {
@@ -24,11 +24,11 @@ const CategoryLabel = ({catName, selectedCatList, addSelectedCat}) => {
             setIsSelected('white');
         }
 
-        if(selectedCatList.includes(catName)){
-            addSelectedCat([...selectedCatList.filter(el=>el !== catName)]);
+        if(selectedCatList.includes(cat.id)){
+            addSelectedCat([...selectedCatList.filter(el => el !== cat.id)]);
         }
         else{
-            addSelectedCat([...selectedCatList, catName]);
+            addSelectedCat([...selectedCatList, cat.id]);
         }
     }
     return(
@@ -37,7 +37,7 @@ const CategoryLabel = ({catName, selectedCatList, addSelectedCat}) => {
         onClick={handleClick}
         
         >
-            {catName}
+            {cat.name}
         </CategoryLabelStyled>
     );
 }

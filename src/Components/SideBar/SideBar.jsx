@@ -31,7 +31,7 @@ const SideBar = ({selectedCatList, addSelectedCat}) => {
                 (cat)=>
                 <CategoryLabel 
                 key={cat.id} 
-                catName={cat.data.name} 
+                cat={{id: cat.id, name: cat.data.name}} 
                 selectedCatList={selectedCatList}
                 addSelectedCat={addSelectedCat}
                 />)
