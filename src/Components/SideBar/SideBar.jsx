@@ -4,10 +4,8 @@ import productCategories from '../../utils/mocks/en-us/product-categories.json';
 import CategoryLabel from "./CategoryLabel/CategoryLabel";
 
 const SideBarStyled = styled.section`
-    /* height: 80vh; */
-    width: 13rem;
+    flex: 1 0 13rem;
     background-color: white;
-    /* overflow-y: scroll; */
 
     .categoriesContainer{
         display: flex;
