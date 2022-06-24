@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import ProductsGrid from '../Components/ProductsGrid/ProductsGrid';
 import SideBar from '../Components/SideBar/SideBar';
@@ -10,6 +10,8 @@ const ProductListStyled = styled.div`
 `;
 
 const ProductList =  ({pageHandler}) => {
+    const [selectedCat, setSelectedCat] = useState();
+    
     return(
         <ProductListStyled>
             <SideBar />
