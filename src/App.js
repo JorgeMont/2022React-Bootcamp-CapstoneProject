@@ -16,7 +16,7 @@ const ShopContainer = styled.main`
 function App() {
   // const { data, isLoading } = useFeaturedBanners();
   // console.log(data, isLoading);
-  const [showHomepage, setShowHomepage] = useState(false);
+  const [showHomepage, setShowHomepage] = useState(true);
 
   return (
     <ShopContainer>
