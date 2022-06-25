@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const PageNumberStyled = styled.div`
     width: 2rem;
     height: 100%;
-    background-color: #79acfb;
+    background-color: ${(props)=>props.pageColor};
     text-align: center;
     display: flex;
     align-items: center;
@@ -18,16 +18,21 @@ const PageNumberStyled = styled.div`
 `;
 
 const PageNumber = ({number, isCurrentPage}) => {
-    const [isCurrent, setIsCurrent] = useState();
+    const [isCurrent, setIsCurrent] = useState('#f0f0f0');
 
     useEffect(
         ()=>{
-            setIsCurrent(isCurrentPage)
+            if(isCurrentPage){
+                setIsCurrent('#79acfb')
+            }
+            else{
+                setIsCurrent('#f0f0f0')
+            }
         }
         ,[]);
 
     return(
-        <PageNumberStyled >
+        <PageNumberStyled pageColor={isCurrent}>
             {number}
         </PageNumberStyled>
     )
