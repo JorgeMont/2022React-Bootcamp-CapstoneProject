@@ -7,11 +7,15 @@ import Pagination from '../Pagination/Pagination';
 const ProductsGridStyled = styled.section`
     flex: 3 0 60rem;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+
     .productsContainer{
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         padding: 1rem;
+        flex: 1 0 auto;
     }
 `;
 

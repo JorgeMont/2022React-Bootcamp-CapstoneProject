@@ -17,7 +17,6 @@ const ProductCardStyled = styled.div`
         height: 60%;
         object-fit: cover;
         border-radius: 5px;
-        background-color: red;
 
         img{
             width: 100%;
