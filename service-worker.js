@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/2022React-Bootcamp-CapstoneProject/precache-manifest.73d5fa50b5dd9355b733caeaa59b9128.js"
+  "/2022React-Bootcamp-CapstoneProject/precache-manifest.d27a1f28d5f9eaf178ce4eb190fe4062.js"
 );
 
 workbox.clientsClaim();

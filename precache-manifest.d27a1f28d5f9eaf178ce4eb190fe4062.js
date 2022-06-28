@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "1200348e73536ca35a20",
+    "revision": "fa7c8697c7842bc40852",
     "url": "/2022React-Bootcamp-CapstoneProject/static/css/main.16fd63db.chunk.css"
   },
   {
-    "revision": "1200348e73536ca35a20",
-    "url": "/2022React-Bootcamp-CapstoneProject/static/js/main.1200348e.chunk.js"
+    "revision": "fa7c8697c7842bc40852",
+    "url": "/2022React-Bootcamp-CapstoneProject/static/js/main.fa7c8697.chunk.js"
   },
   {
     "revision": "5b6718dc6092de094d31",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/2022React-Bootcamp-CapstoneProject/static/media/companyLogo.cc78b024.png"
   },
   {
-    "revision": "28e7285bc1ca0f4a412df6b1884df2c0",
+    "revision": "fbce66b3e5da349f3da075cf603bcde3",
     "url": "/2022React-Bootcamp-CapstoneProject/index.html"
   }
 ];
