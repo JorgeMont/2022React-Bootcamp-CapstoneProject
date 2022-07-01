@@ -1,11 +1,10 @@
+import React from 'react';
 import SliderButtonStyled from "./SliderButtonStyled";
 
-const SliderButton = ({ icon }) => {
+const SliderButton = ({ icon, handleClick }) => {
     return (
-        <SliderButtonStyled>
-            <div className="ControlButton" onClick={() => { console.log('click en izquierda'); }}>
+        <SliderButtonStyled onClick={handleClick}>
                 <i className={icon} />
-            </div>
         </SliderButtonStyled>
     )
 }

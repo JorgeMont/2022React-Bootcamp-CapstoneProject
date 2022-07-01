@@ -1,37 +1,70 @@
-import React,{useEffect, useState} from 'react';
-import Productslist from '../../utils/mocks/en-us/featured-products.json';
-import ProductCard from './ProductCard/ProductCard';
-import ProductGridContainer from './ProductsGridStyled';
+import React, { useState, useEffect } from 'react';
+import ProductCard from '../ProductCard/ProductCard';
+import productsList from '../../utils/mocks/en-us/products.json';
+import styled from 'styled-components';
+import Pagination from '../Pagination/Pagination';
 
-const ProductGrid = () => {
+const ProductsGridStyled = styled.section`
+    flex: 3 0 60rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
 
-    const [productsArray, setProductsArray] = useState();
+    .productsContainer{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 1rem;
+        flex: 1 0 auto;
+    }
+`;
+
+const ProductsGrid = ({ selectedCats }) => {
+    const [products, setProducts] = useState();
 
     useEffect(
-        ()=>{
-            setProductsArray([...Productslist.results]);
+        () => {
+            setProducts([...productsList.results]);
         }
-        ,[])
-    return(
-        productsArray ?
-        <ProductGridContainer>
-            <h2>Most popular Products</h2>
-            <div className="products-grid">
-                {productsArray.map(
-                    (prod)=> 
-                    <ProductCard 
-                    key={prod.id}
-                    imgUrl={prod.data.mainimage.url}
-                    altImg={prod.data.mainimage.alt}
-                    prodCategory={prod.data.category.slug}
-                    prodPrice={prod.data.price}
-                    prodName={prod.data.name}
-                    />)}
-            </div>
-        </ProductGridContainer>
-        : 
-        <p>Nothing yet</p>
+        , []);
+    return (
+        products ?
+            <ProductsGridStyled>
+                <div className="productsContainer">
+                    {selectedCats.length === 0 ?
+                        products.map(
+                            (prod) =>
+                                <ProductCard
+                                    key={prod.id}
+                                    imgUrl={prod.data.mainimage.url}
+                                    altImg={prod.data.mainimage.alt}
+                                    prodCategory={prod.data.category.slug}
+                                    prodPrice={prod.data.price}
+                                    prodName={prod.data.name}
+                                />
+                        )
+                        :
+
+                        products.filter(prod => selectedCats.includes(prod.data.category.id)).map(
+                            prod =>
+                                <ProductCard
+                                    key={prod.id}
+                                    imgUrl={prod.data.mainimage.url}
+                                    altImg={prod.data.mainimage.alt}
+                                    prodCategory={prod.data.category.slug}
+                                    prodPrice={prod.data.price}
+                                    prodName={prod.data.name}
+                                />
+                        )
+
+
+                    }
+                </div>
+                <Pagination />
+            </ProductsGridStyled>
+            :
+            <p>Loading products...</p>
     );
 }
 
-export default ProductGrid;
+export default ProductsGrid;

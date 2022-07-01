@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Banners from '../../utils/mocks/en-us/featured-banners.json';
+import SliderButton from './SliderButton/SliderButton';
 import SliderContainer from './SliderStyled';
 
 const Slider = () => {
@@ -37,12 +38,14 @@ const Slider = () => {
                 <img src={currentImageUrl} alt="img" />
             </div>
             <div className="ButtonsContainer">
-                <div className="ControlButton" onClick={()=>{prevBanner()}}>
-                    <i className="fa-solid fa-chevron-left"/>
-                </div>
-                <div className="ControlButton" onClick={()=>{nextBanner()}}>
-                    <i className="fa-solid fa-chevron-right"/>
-                </div>
+                <SliderButton 
+                handleClick={prevBanner} 
+                icon={"fa-solid fa-chevron-left"}
+                />
+                <SliderButton  
+                handleClick={nextBanner}
+                icon={"fa-solid fa-chevron-right"}
+                />
             </div>
         </SliderContainer>
     )

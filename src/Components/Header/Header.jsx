@@ -1,27 +1,22 @@
 import React from 'react';
 import Logo from '../../Assets/companyLogo.png';
+import HeaderLogo from './HeaderLogo';
 import HeaderContainer from './HeaderStyled';
+import SearchBar from './SearchBar';
+import ShoppingCart from './ShoppingCart';
 
-const Header = () => {
+const Header = ({pageHandler}) => {
 
     return (
         <HeaderContainer>
-            <div className='imgContainer'>
-                <img src={Logo} alt="company logo" />
-            </div>
-            <section>
+            <HeaderLogo srcLogo={Logo} pageHandler={pageHandler}/>
                 <div className='searchBarContainer'>
-                    <form className='searchBar'>
-                        <input type="text" name="search" id="search" />
-                        <button className='buttonSearch' type='submit'>
-                            <i className="fa-solid fa-magnifying-glass" />
-                        </button>
-                    </form>
+                    <SearchBar />
                 </div>
                 <div className='cardContainer'>
-                    <i className="fa-solid fa-cart-shopping" />
+                    {/* <i className="fa-solid fa-cart-shopping" /> */}
+                    <ShoppingCart />
                 </div>
-            </section>
         </HeaderContainer>
     );
 }
