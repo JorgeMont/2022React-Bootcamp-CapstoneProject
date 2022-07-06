@@ -5,16 +5,15 @@ import HeaderContainer from './HeaderStyled';
 import SearchBar from './SearchBar';
 import ShoppingCart from './ShoppingCart';
 
-const Header = ({pageHandler}) => {
+const Header = () => {
 
     return (
         <HeaderContainer>
-            <HeaderLogo srcLogo={Logo} pageHandler={pageHandler}/>
+            <HeaderLogo srcLogo={Logo} />
                 <div className='searchBarContainer'>
                     <SearchBar />
                 </div>
                 <div className='cardContainer'>
-                    {/* <i className="fa-solid fa-cart-shopping" /> */}
                     <ShoppingCart />
                 </div>
         </HeaderContainer>

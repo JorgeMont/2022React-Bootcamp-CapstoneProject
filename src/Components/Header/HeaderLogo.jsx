@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import styled from "styled-components";
 
 const HeaderLogoStyled = styled.div`
@@ -11,11 +12,13 @@ const HeaderLogoStyled = styled.div`
     }
 `;
 
-const HeaderLogo = ({srcLogo, pageHandler}) =>{
+const HeaderLogo = ({srcLogo}) =>{
     return(
-        <HeaderLogoStyled onClick={()=>{pageHandler(true)}}>
+        <Link to="/">
+        <HeaderLogoStyled>
             <img src={srcLogo} alt="company logo" />
         </HeaderLogoStyled>
+        </Link>
     );
 }
 

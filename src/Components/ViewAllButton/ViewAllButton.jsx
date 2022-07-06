@@ -1,10 +1,13 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
 const ViewAllStyled = styled.div`
     width: 100%;
     margin: 1rem 0;
-
+    a{
+        text-decoration: none;
+    }
     .showBtn{
         height: 2.5rem;
         width: 12rem;
@@ -27,7 +30,9 @@ const ViewAllStyled = styled.div`
 const ViewAllButton = ({pageHandler}) => {
     return(
         <ViewAllStyled>
-            <div className='showBtn' onClick={()=>{pageHandler(false)}}>Show All Products</div>
+            <Link to="/products">
+                <div className='showBtn'>Show All Products</div>
+            </Link>
         </ViewAllStyled>
     );
 }

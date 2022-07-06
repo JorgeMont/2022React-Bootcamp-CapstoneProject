@@ -6,7 +6,6 @@ const CategoryLabelStyled = styled.div`
     border-radius: 5px;
     display: inline-block;
     padding: 0;
-    /* padding:  0 0.5rem; */
     
     p{
         font-size: 0.8rem;

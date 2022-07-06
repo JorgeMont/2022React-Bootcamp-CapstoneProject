@@ -10,13 +10,13 @@ const HomepageContainer = styled.section`
     flex: 1 0 auto;
 `;
 
-const Homepage = ({changePage}) => {
+const Homepage = () => {
     return(
         <HomepageContainer>
             <Slider />
             <CategoryGrid />
             <FeatProductsGrid />
-            <ViewAllButton pageHandler={changePage}/>
+            <ViewAllButton />
         </HomepageContainer>
     );
 }

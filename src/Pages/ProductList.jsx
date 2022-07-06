@@ -9,7 +9,7 @@ const ProductListStyled = styled.div`
     flex-direction: row;
 `;
 
-const ProductList =  ({pageHandler}) => {
+const ProductList =  () => {
     const [selectedCat, setSelectedCat] = useState([]);
     
     return(

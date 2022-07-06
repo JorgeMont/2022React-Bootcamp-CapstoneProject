@@ -1,10 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {Outlet} from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
-import Homepage from './Pages/Homepage';
-import ProductList from './Pages/ProductList';
 import styled from 'styled-components';
-// import { useFeaturedBanners } from './utils/hooks/useFeaturedBanners';
 
 const ShopContainer = styled.main`
     display: flex;
@@ -14,14 +12,11 @@ const ShopContainer = styled.main`
 `;
 
 function App() {
-  // const { data, isLoading } = useFeaturedBanners();
-  // console.log(data, isLoading);
-  const [showHomepage, setShowHomepage] = useState(true);
 
   return (
     <ShopContainer>
-        <Header pageHandler={setShowHomepage}/>
-        {showHomepage ? <Homepage changePage={setShowHomepage}/> : <ProductList pageHandler={setShowHomepage} />}        
+        <Header />
+        <Outlet />
         <Footer />
     </ShopContainer>
   );
