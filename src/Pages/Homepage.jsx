@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import BannerSlider from '../Components/BannerSlider/BannerSlider';
 import CategoryGrid from '../Components/CategoryGrid/CategoryGrid';
 import FeatProductsGrid from '../Components/FeatProductsGrid/FeatProductsGrid';
-import Slider from '../Components/Slider/Slider';
 import ViewAllButton from '../Components/ViewAllButton/ViewAllButton';
 
 const HomepageContainer = styled.section`
@@ -13,7 +13,7 @@ const HomepageContainer = styled.section`
 const Homepage = () => {
     return(
         <HomepageContainer>
-            <Slider />
+            <BannerSlider />
             <CategoryGrid />
             <FeatProductsGrid />
             <ViewAllButton />

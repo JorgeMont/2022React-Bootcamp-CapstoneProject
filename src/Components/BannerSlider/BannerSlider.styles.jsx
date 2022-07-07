@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-// .slideshow-container
-const SliderContainer = styled.div`
+const BannerSliderContainer = styled.div`
     .imageContainer{
         width: 100%;
         height: 30rem;
@@ -24,4 +23,4 @@ const SliderContainer = styled.div`
     
 `;
 
-export default SliderContainer;
+export default BannerSliderContainer;
