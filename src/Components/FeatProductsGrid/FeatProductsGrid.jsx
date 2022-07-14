@@ -1,11 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import Productslist from '../../utils/mocks/en-us/featured-products.json';
+import { useFeaturedProducts } from '../../utils/hooks/useFeaturedProducts';
 import ProductCard from '../ProductCard/ProductCard';
 import ProductGridContainer from './ProductsGridStyled';
 
 const FeatProductsGrid = () => {
 
     const [productsArray, setProductsArray] = useState();
+    const {data, isLoading} = useFeaturedProducts();
+
+    console.log(data.results);
 
     useEffect(
         ()=>{
@@ -14,6 +18,7 @@ const FeatProductsGrid = () => {
         ,[]);
         
     return(
+        
         productsArray ?
         <ProductGridContainer>
             <h2>Most popular Products</h2>

@@ -7,6 +7,10 @@ const StyledCategoryContainer = styled.div`
     background-color: #eaeded;
     padding: 2rem 0;
 
+    a{
+        text-decoration: none;
+    }
+
     h2{
         padding: 1rem 0;
     }
