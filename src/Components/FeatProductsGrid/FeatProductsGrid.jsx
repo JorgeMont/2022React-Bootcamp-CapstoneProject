@@ -1,29 +1,19 @@
-import React, {useEffect, useState} from 'react';
-import Productslist from '../../utils/mocks/en-us/featured-products.json';
+import React from 'react';
 import { useFeaturedProducts } from '../../utils/hooks/useFeaturedProducts';
 import ProductCard from '../ProductCard/ProductCard';
 import ProductGridContainer from './ProductsGridStyled';
 
 const FeatProductsGrid = () => {
 
-    const [productsArray, setProductsArray] = useState();
     const {data, isLoading} = useFeaturedProducts();
-
-    console.log(data.results);
-
-    useEffect(
-        ()=>{
-            setProductsArray([...Productslist.results]);
-        }
-        ,[]);
         
     return(
         
-        productsArray ?
+        !isLoading ?
         <ProductGridContainer>
             <h2>Most popular Products</h2>
             <div className="products-grid">
-                {productsArray.map(
+                {data.results.map(
                     (prod)=> 
                     <ProductCard 
                     key={prod.id}

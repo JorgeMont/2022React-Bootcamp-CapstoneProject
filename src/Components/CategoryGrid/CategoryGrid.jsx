@@ -15,7 +15,9 @@ const CategoryGrid = () => {
             <h2>Explore our main categories</h2>
             <div className="categories-grid">
             {data.results.map(
-                (cat)=> <Link to="/products" ><CategoryCard key={cat.id} name={cat.data.name}/></Link>
+                (cat)=> <Link to="/products" key={cat.id}>
+                            <CategoryCard key={cat.id} name={cat.data.name}/>
+                        </Link>
             )}
             </div>
         </StyledCategoryContainer>

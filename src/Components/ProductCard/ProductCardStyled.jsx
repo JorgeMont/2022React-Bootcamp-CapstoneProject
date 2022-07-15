@@ -27,7 +27,7 @@ const ProductCardStyled = styled.div`
     .prodInfo{
         .productName{
             padding: 0.2rem 0;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             height: 4rem;
             margin-bottom: 0.3rem;
         }
