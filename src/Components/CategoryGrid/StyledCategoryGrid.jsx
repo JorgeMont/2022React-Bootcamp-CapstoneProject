@@ -9,6 +9,7 @@ const StyledCategoryContainer = styled.div`
 
     a{
         text-decoration: none;
+        color: black;
     }
 
     h2{

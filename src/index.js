@@ -14,7 +14,13 @@ root.render(
         return (
           <Route path={path} element={<App />} key={index}>
             <Route index element={<Homepage />} />
-            <Route path="products" element={<ProductList />} />
+            <Route path="products" >
+              <Route
+                index
+                element={<ProductList />}
+              />
+              <Route path=":searchCat" element={<ProductList />} />
+            </Route>
           </Route>
         );
       })}
