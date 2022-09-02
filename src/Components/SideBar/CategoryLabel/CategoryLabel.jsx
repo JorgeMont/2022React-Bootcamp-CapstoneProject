@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const CategoryLabelStyled = styled.div`
     width: 100%;
     padding: 1rem;
-    background-color: ${(props)=>props.color};
+    background-color: ${(props) => props.color};
 
     &:hover{
         cursor: pointer;
@@ -13,15 +13,15 @@ const CategoryLabelStyled = styled.div`
     }
 `;
 
-const CategoryLabel = ({cat, selectedCatList, addSelectedCat}) => {
-    const [isSelected, setIsSelected] = useState('white');
+const CategoryLabel = ({ cat, selectedCatList, addSelectedCat }) => {
+    const [isSelectedColor, setIsSelectedColor] = useState();
 
     const handleClick = (color) => {
-        if(isSelected === "white"){
-            setIsSelected('#eaeded');
+        if(isSelectedColor === "white"){
+            setIsSelectedColor('#eaeded');
         }
         else{
-            setIsSelected('white');
+            setIsSelectedColor('white');
         }
 
         if(selectedCatList.includes(cat.id)){
@@ -31,11 +31,17 @@ const CategoryLabel = ({cat, selectedCatList, addSelectedCat}) => {
             addSelectedCat([...selectedCatList, cat.id]);
         }
     }
-    return(
-        <CategoryLabelStyled 
-        color={isSelected}
-        onClick={handleClick}
-        
+
+    useEffect(() => {
+        selectedCatList.includes(cat.id) ? setIsSelectedColor('#eaeded') : setIsSelectedColor('white');
+    }, []);
+
+
+    return (
+        <CategoryLabelStyled
+            color={isSelectedColor}
+            onClick={handleClick}
+
         >
             {cat.name}
         </CategoryLabelStyled>

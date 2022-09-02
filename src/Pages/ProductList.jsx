@@ -11,14 +11,15 @@ const ProductListStyled = styled.div`
 `;
 
 const ProductList =  () => {
-    const [selectedCat, setSelectedCat] = useState([]);
     let {searchCat} = useParams();
+    const [selectedCatArray, setSelectedCatArray] = useState([searchCat]);
     
-    console.log(searchCat);
+
+
     return(
         <ProductListStyled>
-            <SideBar selectedCatList={selectedCat} addSelectedCat={setSelectedCat} />
-            <ProductsGrid selectedCats={selectedCat}/>
+            <SideBar selectedCatList={selectedCatArray} addSelectedCat={setSelectedCatArray} />
+            <ProductsGrid selectedCats={selectedCatArray} />
             <Outlet />
         </ProductListStyled>
     );
