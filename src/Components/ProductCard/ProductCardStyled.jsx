@@ -12,6 +12,10 @@ const ProductCardStyled = styled.div`
     -moz-box-shadow: 6px 13px 10px 0px rgba(0,0,0,0.2);
     margin-bottom: 1.5rem;
 
+    &:hover{
+        cursor: pointer;
+    }
+
     .imageContainer{
         width: 100%;
         height: 60%;
